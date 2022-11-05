@@ -12,7 +12,7 @@ from .models import Task
 
 # Create your views here.
 class CustomLoginView(LoginView):
-    template_name = 'list_app/login.html'
+    template_name = 'list_app/index.html'
     fields = '__all__'
     redirect_authenticated_user = True
 
