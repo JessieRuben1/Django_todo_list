@@ -152,7 +152,7 @@ class TaskCreate(LoginRequiredMixin, CreateView):
         
         The form_valid function is a function that is called when the form is submitted. 
         
-    # Creating a new task.
+    
         The form_valid function is a function that is called when the form is submitted. 
         
         The form_valid function is a function that is called when the form is submitted. 

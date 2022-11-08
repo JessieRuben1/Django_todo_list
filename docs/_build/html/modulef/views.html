@@ -1,0 +1,333 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Views &#8212; todo_list 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="module-list_app.views">
+<span id="views"></span><h1>Views<a class="headerlink" href="#module-list_app.views" title="Permalink to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="list_app.views.CustomLoginView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">list_app.views.</span></span><span class="sig-name descname"><span class="pre">CustomLoginView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/list_app/views.html#CustomLoginView"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#list_app.views.CustomLoginView" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is a class based view that is inheriting from the LoginView class.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="list_app.views.CustomLoginView.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'__all__'</span></em><a class="headerlink" href="#list_app.views.CustomLoginView.fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="list_app.views.CustomLoginView.get_success_url">
+<span class="sig-name descname"><span class="pre">get_success_url</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/list_app/views.html#CustomLoginView.get_success_url"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#list_app.views.CustomLoginView.get_success_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>The function get_success_url() is a method that returns the URL of the page that the user will be redirected to
+after successfully submitting the form
+:return: The url for the tasks page.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="list_app.views.CustomLoginView.redirect_authenticated_user">
+<span class="sig-name descname"><span class="pre">redirect_authenticated_user</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#list_app.views.CustomLoginView.redirect_authenticated_user" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="list_app.views.CustomLoginView.template_name">
+<span class="sig-name descname"><span class="pre">template_name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'list_app/index.html'</span></em><a class="headerlink" href="#list_app.views.CustomLoginView.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="list_app.views.RegisterPage">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">list_app.views.</span></span><span class="sig-name descname"><span class="pre">RegisterPage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/list_app/views.html#RegisterPage"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#list_app.views.RegisterPage" title="Permalink to this definition">¶</a></dt>
+<dd><p>The RegisterPage class inherits from the FormView class, and it uses the UserCreationForm form to create a new user</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="list_app.views.RegisterPage.form_class">
+<span class="sig-name descname"><span class="pre">form_class</span></span><a class="headerlink" href="#list_app.views.RegisterPage.form_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">UserCreationForm</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="list_app.views.RegisterPage.form_valid">
+<span class="sig-name descname"><span class="pre">form_valid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">form</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/list_app/views.html#RegisterPage.form_valid"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#list_app.views.RegisterPage.form_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>The form_valid function is called when the form is submitted and valid.</p>
+<p>The form_valid function is called when the form is submitted and valid.</p>
+<p>The form_valid function is called when the form is submitted and valid.</p>
+<p>The form_valid function is called when the form is submitted and valid.</p>
+<p>The form_valid function is called when the form is submitted and valid.</p>
+<p>The form_valid function is called when the form is submitted and valid.</p>
+<p>The form_valid function is called when the form is submitted and valid.</p>
+<p>The form_valid function is called when the form is submitted and valid.</p>
+<p>The form_valid function is called when the form is submitted and valid.</p>
+<p>The form_valid function is called when the form is submitted and valid.</p>
+<p>The form_valid function is called when the form is submitted and valid.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>form</strong> – The form that was submitted</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The super class of the RegisterPage class.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="list_app.views.RegisterPage.get">
+<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/list_app/views.html#RegisterPage.get"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#list_app.views.RegisterPage.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>If the user is authenticated, redirect to the tasks page, otherwise, return the super class’s get method
+:return: The super class of RegisterPage is being returned.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="list_app.views.RegisterPage.redirect_authenticated_user">
+<span class="sig-name descname"><span class="pre">redirect_authenticated_user</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#list_app.views.RegisterPage.redirect_authenticated_user" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="list_app.views.RegisterPage.success_url">
+<span class="sig-name descname"><span class="pre">success_url</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/'</span></em><a class="headerlink" href="#list_app.views.RegisterPage.success_url" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="list_app.views.RegisterPage.template_name">
+<span class="sig-name descname"><span class="pre">template_name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'list_app/register.html'</span></em><a class="headerlink" href="#list_app.views.RegisterPage.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="list_app.views.TaskCreate">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">list_app.views.</span></span><span class="sig-name descname"><span class="pre">TaskCreate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/list_app/views.html#TaskCreate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#list_app.views.TaskCreate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creating a new task.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="list_app.views.TaskCreate.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['title',</span> <span class="pre">'description',</span> <span class="pre">'task_complete']</span></em><a class="headerlink" href="#list_app.views.TaskCreate.fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="list_app.views.TaskCreate.form_valid">
+<span class="sig-name descname"><span class="pre">form_valid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">form</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/list_app/views.html#TaskCreate.form_valid"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#list_app.views.TaskCreate.form_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>The form_valid function is a function that is called when the form is submitted.</p>
+<p>The form_valid function is a function that is called when the form is submitted.</p>
+<p>The form_valid function is a function that is called when the form is submitted.</p>
+<p>The form_valid function is a function that is called when the form is submitted.</p>
+<p>The form_valid function is a function that is called when the form is submitted.</p>
+<p>The form_valid function is a function that is called when the form is submitted.</p>
+<p>The form_valid function is a function that is called when the form is submitted.</p>
+<p>The form_valid function is a function that is called when the form is submitted.</p>
+<p>The form_valid function is a function that is called when the form is submitted.</p>
+<p>The form_valid function is a function that is called when the form is submitted.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>form</strong> – The form that was submitted</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The form is being returned.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="list_app.views.TaskCreate.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#list_app.views.TaskCreate.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">Task</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="list_app.views.TaskCreate.success_url">
+<span class="sig-name descname"><span class="pre">success_url</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/'</span></em><a class="headerlink" href="#list_app.views.TaskCreate.success_url" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="list_app.views.TaskDelete">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">list_app.views.</span></span><span class="sig-name descname"><span class="pre">TaskDelete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/list_app/views.html#TaskDelete"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#list_app.views.TaskDelete" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is a view that allows a user to delete a task.
+The first line of the class is the name of the class. The name of the class is TaskDelete</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="list_app.views.TaskDelete.context_object_name">
+<span class="sig-name descname"><span class="pre">context_object_name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'task'</span></em><a class="headerlink" href="#list_app.views.TaskDelete.context_object_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="list_app.views.TaskDelete.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#list_app.views.TaskDelete.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">Task</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="list_app.views.TaskDelete.success_url">
+<span class="sig-name descname"><span class="pre">success_url</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/'</span></em><a class="headerlink" href="#list_app.views.TaskDelete.success_url" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="list_app.views.TaskDetail">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">list_app.views.</span></span><span class="sig-name descname"><span class="pre">TaskDetail</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/list_app/views.html#TaskDetail"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#list_app.views.TaskDetail" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is a class based view that is inheriting from the DetailView class.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="list_app.views.TaskDetail.context_object_name">
+<span class="sig-name descname"><span class="pre">context_object_name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'task'</span></em><a class="headerlink" href="#list_app.views.TaskDetail.context_object_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="list_app.views.TaskDetail.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#list_app.views.TaskDetail.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">Task</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="list_app.views.TaskDetail.template_name">
+<span class="sig-name descname"><span class="pre">template_name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'list_app/task.html'</span></em><a class="headerlink" href="#list_app.views.TaskDetail.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="list_app.views.TaskList">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">list_app.views.</span></span><span class="sig-name descname"><span class="pre">TaskList</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/list_app/views.html#TaskList"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#list_app.views.TaskList" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is a list view of the Task model, and the context object name is ‘tasks’.
+The context object name is the name of the variable that will be passed to the template. In this case, the template will.
+receive a variable called tasks, which will contain a list of all the tasks in the database.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="list_app.views.TaskList.context_object_name">
+<span class="sig-name descname"><span class="pre">context_object_name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'tasks'</span></em><a class="headerlink" href="#list_app.views.TaskList.context_object_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="list_app.views.TaskList.get_context_data">
+<span class="sig-name descname"><span class="pre">get_context_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/list_app/views.html#TaskList.get_context_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#list_app.views.TaskList.get_context_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>We’re overriding the get_context_data function of the ListView class, and adding a new key to the context dictionary
+called ‘tasks’ which is equal to the queryset of all tasks, but filtered by the current user
+:return: The context is being returned.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="list_app.views.TaskList.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#list_app.views.TaskList.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">Task</span></code></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="list_app.views.TaskUpdate">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">list_app.views.</span></span><span class="sig-name descname"><span class="pre">TaskUpdate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/list_app/views.html#TaskUpdate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#list_app.views.TaskUpdate" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is a view that allows a user to update a task.
+The first line of the class is the name of the class. The name of the class is TaskUpdate</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="list_app.views.TaskUpdate.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['title',</span> <span class="pre">'description',</span> <span class="pre">'task_complete']</span></em><a class="headerlink" href="#list_app.views.TaskUpdate.fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="list_app.views.TaskUpdate.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#list_app.views.TaskUpdate.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">Task</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="list_app.views.TaskUpdate.success_url">
+<span class="sig-name descname"><span class="pre">success_url</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/'</span></em><a class="headerlink" href="#list_app.views.TaskUpdate.success_url" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">todo_list</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="about-me.html">All about me</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2022, Jessie.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.0.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/modulef/views.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
