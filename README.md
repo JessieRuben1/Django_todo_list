@@ -8,4 +8,5 @@
  this is the link for the Docker image: https://hub.docker.com/repository/docker/jessiemaluasila/todo_list.
  
  # Run Project
- 
+make sure you install Django, to install Django run 'pip install django' if you are running on another OS learn how to install here:    https://docs.djangoproject.com/en/4.1/topics/install/ also make sure you have python and a IDE of your choice. install python here: https://www.python.org/downloads/ Once you have everything set up clone this repo. Once the open the terminal and run this command: 'python manage.py runserver'. If you are using Mac 
+run 'python3 manage.py runserver'.
